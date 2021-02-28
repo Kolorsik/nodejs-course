@@ -4,31 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task 12</title>
 </head>
 <body>
-    <button onclick="f()">CLICK</button>
+    <p>1.  Send parallel requests for information about cities - Minsk, Madrid, Rome. Display the result in format: city - country</p>
+    <button onclick="parallelRequests()">Click 1</button>
+    <div id="task1"></div>
 
-    <script>
-        function f() {
-            fetch('http://geocode.xyz/Minsk?json=1&auth=869122208963241887711x53952').then(res => {
-                res.json().then(res => {
-                    console.log(res);
-                });
-            })
+    <p>2. Using Promise.race get the country of these cities - Paris, Nice. Display result</p>
+    <button onclick="promiseRace()">Click 2</button>
+    <div id="task2"></div>
 
-            fetch('http://geocode.xyz/Madrid?json=1&auth=869122208963241887711x53952').then(res => {
-                res.json().then(res => {
-                    console.log(res);
-                });
-            })
+    <p>3. Write a function that returns a promise that resolves any cities' names after 3 second.
+        After you get names send parallel requests for information about cities. Display the country of
+        the cities.</p>
+    <button onclick="promiseResolves()">Click 3</button>
+    <div id="task3"></div>
 
-            fetch('http://geocode.xyz/Rome?json=1&auth=869122208963241887711x53952').then(res => {
-                res.json().then(res => {
-                    console.log(res);
-                });
-            })
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
