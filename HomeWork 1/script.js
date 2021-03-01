@@ -93,6 +93,7 @@ function countSubstrInStr(str, subtr) {
     return str.split(subtr).length - 1;
 }
 
+console.log(countSubstrInStr('phone iphone telephone phoneee', 'phone'));
 console.log(countSubstrInStr('carcarcar', 'ca'));
 console.log(countSubstrInStr('qweqweqwqwwqe', 'qwe'));
 
@@ -209,6 +210,6 @@ function promiseResolves() {
             error => {
                 new Error(error);
             }
-        })
-    })
+        });
+    });
 }
