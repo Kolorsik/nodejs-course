@@ -19,7 +19,7 @@ function listenerSecond(...messages) {
 
 // This listener wants o be subscribed on event, emitter for 'dealWithStreamsInFs'
 function listenerThird(...messages) {
-    console.log('"dealWithEventsInStreamsInFs" event has been handled');
+    console.log('"dealWithStreamsInFs" event has been handled');
     console.log(`Received messages: ${messages.join('.')}`);
 }
 

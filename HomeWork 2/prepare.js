@@ -51,7 +51,7 @@ function checkDataFolder() {
 function checkOutputFolder() {
     if (fs.existsSync('./output')) {
         cleanup();
-        //throw new Error("Output folder is here, but need to be removed (use cleanup script)");
+        throw new Error('The output folder is here and you need to delete it, BUT our "super script" has already done everything for you. Just restart the script ༼ つ ◕_◕ ༽つ');
     } else {
         createOutputFolder();
     }
