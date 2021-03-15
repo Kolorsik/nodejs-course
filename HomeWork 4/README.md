@@ -177,7 +177,7 @@ Unsuccess Response Body = Error Message
 
 ### Request
 Body = Work  
-Example: /works/1  
+Example: PUT /works/1  
 ```json
 {
     "name": "John",
@@ -196,7 +196,7 @@ Unsuccess Response Body = Error Message
 
 ### Request
 Body = Work  
-Example: /works/1  
+Example: PATCH /works/1  
 (There must be at least one property)  
 ```json
 {
@@ -215,7 +215,7 @@ Unsuccess Response Body = Error Message
 ## DELETE /works/{work_id} - Delete work by id
 
 ### Request
-Example: /works/1
+Example: DELETE /works/1
 
 ### Response
 Success Code: 200  
@@ -226,7 +226,7 @@ Unsuccess Response Body = Error Message
 ## DELETE /works/{work_id}/{worker_id} - Delete worker by id from work by id
 
 ### Request
-Example: /works/1/1
+Example: DELETE /works/1/1
 
 ### Response
 Success Code: 200  
