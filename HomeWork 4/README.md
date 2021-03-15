@@ -1,8 +1,8 @@
-Firstly, you need to configure you database in file './database/sequelize.js'
-You need to specify the name of the database, username and password
-The request must indicate which version it is: v1 or v2
-Examples: /v1/workers/1; /v2/workers
-The difference is that v1 is queries written using seqielize objects and methods, while v2 uses raw sql to work with the database.
+Firstly, you need to configure you database in file './database/sequelize.js'  
+You need to specify the name of the database, username and password  
+The request must indicate which version it is: v1 or v2  
+Examples: /v1/workers/1; /v2/workers  
+The difference is that v1 is queries written using seqielize objects and methods, while v2 uses raw sql to work with the database.  
 
 # API
 ## Workers
