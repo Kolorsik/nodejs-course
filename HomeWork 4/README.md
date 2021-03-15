@@ -21,10 +21,10 @@ Success Response Body = Workers[]
 Example: GET /workers/1
 
 ### Response
-Success Code: 200
-Success Response Body = Worker
-Unsuccess Code: 404
-Unsuccess Response Body = Error Message
+Success Code: 200  
+Success Response Body = Worker  
+Unsuccess Code: 404  
+Unsuccess Response Body = Error Message  
 
 ## GET /workers/{worker_id}/works - Get works where the worker works
 
