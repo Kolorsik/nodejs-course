@@ -111,7 +111,7 @@ Success Response Body = Success Message
 Unsuccess Code: 404  
 Unsuccess Response Body = Error Message  
 
-## DELETE /workers/{worker_id}/{work_id} - Delete work with id from worker with idWork
+## DELETE /workers/{worker_id}/{work_id} - Delete work with id from worker with id
 
 ### Request
 Example: DELETE /workers/1/1
@@ -132,7 +132,7 @@ Example: GET /works
 Success Code: 200  
 Success Response Body = Works[]  
 
-## GET /works/{work_id} - Get work by idWork
+## GET /works/{work_id} - Get work by id
 
 ### Request
 Example: GET /works/1
@@ -173,7 +173,7 @@ Success Response Body = Success Message and Created Work
 Unsuccess Code: 400  
 Unsuccess Response Body = Error Message  
 
-## PUT /works/{work_id} - Update work by idWork
+## PUT /works/{work_id} - Update work by id
 
 ### Request
 Body = Work  
