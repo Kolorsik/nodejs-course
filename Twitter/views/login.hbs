@@ -1,0 +1,24 @@
+<div class="nes-container is-centered with-title">
+    <h2>Вход в аккаунт</h2>
+
+    {{#if loginError}}
+        <p class="nes-text is-error">{{loginError}}</p>
+    {{/if}}
+
+    <form method="post" action="/user/login">
+        <div class="nes-field">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" class="nes-input" {{#if email}} value="{{email}}" {{/if}} >
+        </div>
+
+        <div class="nes-field">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" class="nes-input">
+        </div>
+        
+        <button type="submit" class="nes-btn is-success">Войти в аккаунт</button>
+
+    </form>
+
+    <a href="/user/register">Не зарегистрированы? Регистрация</a>
+</div>

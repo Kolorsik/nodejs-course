@@ -1,0 +1,23 @@
+{{#if posts.length}}
+    {{#each posts}}
+        <div class="nes-container post">
+            <a href="/user/{{userId}}">{{userLogin}}</a>
+            <p>{{text}}</p>
+            {{#if image}}
+                <img width="100px" src="/uploads/{{image}}">
+            {{/if}}
+            {{#each tags}}
+                <p><a href="?tag={{this}}">{{this}}</a></p>
+            {{/each}}
+            {{#ifeq userId @root.user._id}}
+                <p><a href="/post/{{_id}}/edit">Изменить</a></p>
+                <p><a href="/post/{{_id}}/delete">Удалить</a></p>
+            {{/ifeq}}
+            <p><a href="/post/{{_id}}">Комментарии</a></p>
+        </div>
+    {{/each}}
+{{else}}
+    <div>
+        <p>Посты не найдены</p>
+    </div>
+{{/if}}

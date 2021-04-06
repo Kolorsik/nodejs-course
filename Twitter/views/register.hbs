@@ -1,0 +1,36 @@
+<div class="nes-container is-centered with-title">
+    <h2>Регистрация аккаунта</h2>
+    
+    {{#if registerError}}
+        <p class="nes-text is-error">{{registerError}}</p>
+    {{/if}}
+
+    <form method="post" action="/user/register">
+        <div class="nes-field">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" class="nes-input" required {{#if email}} value="{{email}}" {{/if}} >
+        </div>
+
+        <div class="nes-field">
+            <label for="login">Логин</label>
+            <input type="login" id="login" name="login" minlength="4" class="nes-input" required {{#if login}} value="{{login}}" {{/if}} >
+        </div>
+
+        <div class="nes-field">
+            <label for="password">Пароль</label>
+            <input type="password" onchange="checkPasswords()" id="password" minlength="6" name="password" class="nes-input" required>
+        </div>
+
+        <div class="nes-field">
+            <label for="confirmPassword">Подтверждение пароля</label>
+            <input type="password" onchange="checkPasswords()" id="confirmPassword" minlength="6" name="confirmPassword" class="nes-input" required>
+        </div>
+
+        <div id="checkPassword">Пароли не совпадают</div>
+        
+        <button type="submit" id="registerButton" class="nes-btn is-success">Регистрация аккаунта</button>
+
+    </form>
+
+    <a href="/user/login">Уже зарегистрированы? Войти в аккаунт</a>
+</div>

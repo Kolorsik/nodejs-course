@@ -1,0 +1,41 @@
+<div class="nes-container post">
+    <a href="/user/{{post.userId}}">{{post.userLogin}}</a>
+    <p>{{post.text}}</p>
+    {{#if post.image}}
+        <img width="100px" src="/uploads/{{post.image}}">
+    {{/if}}
+    {{#each post.tags}}
+        <p><a href="?tag={{this}}">{{this}}</a></p>
+    {{/each}}
+    {{#ifeq post.userId user._id}}
+        <p><a href="/post/{{post._id}}/edit">Изменить</a></p>
+        <p><a href="/post/{{post._id}}/delete">Удалить</a></p>
+    {{/ifeq}}
+
+    {{#if user}}
+        <form method="post" action="/comment">
+            <input value="{{post._id}}" name="postId" hidden>
+            <label for="textarea_field">Введите текст</label>
+            <textarea id="textarea_field" name="text" class="nes-textarea" required></textarea>
+
+            <button class="nes-btn is-success">Добавить комментарий</button>
+        </form>
+    {{/if}}
+
+    {{#each comments}}
+
+    <div class="nes-container post">
+        <a href="/user/{{userId}}">{{userLogin}}</a>
+        <p>{{text}}</p>
+        {{#if image}}
+            <img width="100px" src="/uploads/{{image}}">
+        {{/if}}
+        {{#ifeq userId @root.user._id}}
+            <p><a href="/comment/{{post._id}}/edit">Изменить</a></p>
+            <p><a href="/comment/{{post._id}}/delete">Удалить</a></p>
+        {{/ifeq}}
+    </div>
+
+    {{/each}}
+
+</div>

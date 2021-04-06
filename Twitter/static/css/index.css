@@ -1,0 +1,36 @@
+html, body, pre, code, kbd, samp {
+    font-family: "Balsamiq Sans", serif;
+}
+
+header {
+    background-color: #d3d3d9;
+    display: flex;
+}
+
+.nes-field {
+    margin: auto;
+    width: 50%;
+}
+
+.nes-btn {
+    margin-top: 20px;
+}
+
+.comment {
+    color: #007bff;
+}
+
+.post {
+    margin: 20px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navbar-item {
+    margin-right: 20px;
+}

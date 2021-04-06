@@ -1,0 +1,24 @@
+<nav>
+    <ul class="navbar">
+        <li class="navbar-item">
+            <a href="/">Главная страница</a>
+        </li>
+        {{#if user}}
+        <li class="navbar-item">
+            <a href="/user/{{user._id}}">{{user.login}}</a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="/post/new">Создать пост</a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="/user/logout">Выйти с аккаунта</a>
+        </li>
+        {{else}}
+        <li class="navbar-item">
+            <a href="/user/login">Войти в аккаунт</a>
+        </li>
+        {{/if}}
+    </ul>
+</nav>

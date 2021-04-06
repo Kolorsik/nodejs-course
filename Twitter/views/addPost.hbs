@@ -1,0 +1,10 @@
+<div class="nes-container with-title post">
+    <p class="title">Новый пост</p>
+    <form method="post" action="/post/new" enctype="multipart/form-data">
+        <label for="textarea_field">Введите текст</label>
+        <textarea id="textarea_field" name="text" class="nes-textarea" required></textarea>
+        <input type="file" accept="image/*" name="photo">
+
+        <button type="submit" class="nes-btn is-success">Добавить пост</button>
+    </form>
+</div>
